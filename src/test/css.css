@@ -1,0 +1,45 @@
+/* #country-select {
+  border: none;
+  background: url("../../public/images/vietnam1.png") no-repeat left center;
+  background-size: 24px;
+}
+
+#country-select option[value="vn"] {
+  background: url("../../public/images/vietnam1.png") no-repeat right center;
+  background-color: rgb(2, 2, 32);
+  color: white;
+}
+
+option {
+  width: 143px;
+  position: absolute;
+  margin-left: -50px;
+  background: rgb(2, 2, 32);
+  color: white;
+}
+
+#country-select option[value="us"] {
+  background-position: -24px 0;
+}
+
+#country-select option[value="fr"] {
+  background-position: -48px 0;
+}
+
+#country-select:focus {
+  outline: none; 
+  border: none; 
+} */
+
+/* Add more background positions for other countries */
+/* .sion a:active {
+  color: #ff7506;
+} */
+option {
+  width: 143px;
+  background: rgb(2, 2, 32);
+  color: white;
+}
+.CoCuaAi li {
+  cursor: pointer;
+}
