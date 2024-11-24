@@ -128,7 +128,6 @@ function App() {
               ></Route>
               {/* <Route path="/testConfirmMail" element={<Resetpass />}></Route> */}
             </Route>
-            <Route path="*" element={<Navigate to="/Alta_Social_Media" />} />
           </Routes>
 
           {desiredPath === "sidebardefault" && <SideBar value={1} />}
@@ -263,7 +262,6 @@ function App() {
                 element={<DSPlayList1 />}
               ></Route>
             </Route>
-            <Route path="*" element={<Navigate to="/Alta_Social_Media" />} />
           </Routes>
 
           {desiredPath === "sidebarhidden" && <SideBar value={2} />}
@@ -430,7 +428,6 @@ function App() {
                 element={<ThemPlayList />}
               ></Route>
             </Route>
-            <Route path="*" element={<Navigate to="/Alta_Social_Media" />} />
           </Routes>
         </div>
       </div>
