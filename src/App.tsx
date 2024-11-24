@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Log from "./Quanlythongtincoban_DangNhap/Log";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Forget from "./Quanlythongtincoban_DangNhap/Foget";
 import DaMK from "./Quanlythongtincoban_DangNhap/DatlaiMK";
 import DanhSachHopDong from "./HopDongUyQuyen/DanhSachHopDong";
@@ -106,321 +106,331 @@ function App() {
       >
         <div style={{ width: "100%", display: "flex" }}>
           <Routes>
-            <Route path="/" element={<Log />}></Route>
-            <Route path="/foget" element={<Forget />}></Route>
-            <Route path="/KPMK" element={<KhoiPhucMK />}></Route>
-            <Route path="/loilink" element={<LoiLink />}></Route>
-            <Route path="/Datlaimatkhau" element={<DaMK />}></Route>
+            <Route path="/Alta_Social_Media">
+              {/* <Route path="/" element={<Log />}></Route> */}
+              <Route index element={<Log />}></Route>
+              <Route path="foget" element={<Forget />}></Route>
+              <Route path="KPMK" element={<KhoiPhucMK />}></Route>
+              <Route path="loilink" element={<LoiLink />}></Route>
+              <Route path="Datlaimatkhau" element={<DaMK />}></Route>
 
-            <Route
-              path="/TestCheckBoxKichHoat"
-              element={<TestCheckBoxKichHoat />}
-            ></Route>
+              <Route
+                path="TestCheckBoxKichHoat"
+                element={<TestCheckBoxKichHoat />}
+              ></Route>
 
-            <Route path="/DropDown" element={<DropDown />}></Route>
-            <Route path="/TestCoLanguege" element={<TestCoLanguege />}></Route>
+              <Route path="DropDown" element={<DropDown />}></Route>
+              <Route path="TestCoLanguege" element={<TestCoLanguege />}></Route>
 
-            <Route
-              path="/SelectWithHover"
-              element={<SelectWithHover />}
-            ></Route>
-            {/* <Route path="/testConfirmMail" element={<Resetpass />}></Route> */}
+              <Route
+                path="SelectWithHover"
+                element={<SelectWithHover />}
+              ></Route>
+              {/* <Route path="/testConfirmMail" element={<Resetpass />}></Route> */}
+            </Route>
+            <Route path="*" element={<Navigate to="/Alta_Social_Media" />} />
           </Routes>
 
           {desiredPath === "sidebardefault" && <SideBar value={1} />}
 
           <Routes>
-            <Route path="/SideBarDefault/navbar" element={<Trang1 />}></Route>
-            <Route
-              path="/SideBarDefault/DShopdong"
-              element={<DanhSachHopDong />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/suathongtin"
-              element={<SuaThongTin />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/DanhSachHopDongKhaiThac"
-              element={<DanhSachHopDongKhaiThac />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/DanhSachLichPhat"
-              element={<DanhSachLichPhat />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/DonViSuDung"
-              element={<DonViSuDung />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/DanhSachThietBi"
-              element={<DanhSachThietBi />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/DanhSachDoiTacUyQuyen"
-              element={<DanhSachDoiTacUyQuyen />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/QuanLyPhanPhoiDoanhThu"
-              element={<QuanLyPhanPhoiDoanhThu />}
-            ></Route>
+            <Route path="/Alta_Social_Media">
+              <Route path="SideBarDefault/navbar" element={<Trang1 />}></Route>
+              <Route
+                path="SideBarDefault/DShopdong"
+                element={<DanhSachHopDong />}
+              ></Route>
+              <Route
+                path="SideBarDefault/suathongtin"
+                element={<SuaThongTin />}
+              ></Route>
+              <Route
+                path="SideBarDefault/DanhSachHopDongKhaiThac"
+                element={<DanhSachHopDongKhaiThac />}
+              ></Route>
+              <Route
+                path="SideBarDefault/DanhSachLichPhat"
+                element={<DanhSachLichPhat />}
+              ></Route>
+              <Route
+                path="SideBarDefault/DonViSuDung"
+                element={<DonViSuDung />}
+              ></Route>
+              <Route
+                path="SideBarDefault/DanhSachThietBi"
+                element={<DanhSachThietBi />}
+              ></Route>
+              <Route
+                path="SideBarDefault/DanhSachDoiTacUyQuyen"
+                element={<DanhSachDoiTacUyQuyen />}
+              ></Route>
+              <Route
+                path="SideBarDefault/QuanLyPhanPhoiDoanhThu"
+                element={<QuanLyPhanPhoiDoanhThu />}
+              ></Route>
 
-            <Route
-              path="/SideBarDefault/ChartBaoCaoDoanhThu"
-              element={<ChartBaoCaoDoanhThu />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/LichSuDoiSoatDoanhThu"
-              element={<LichSuDoiSoatDoanhThu />}
-            ></Route>
+              <Route
+                path="SideBarDefault/ChartBaoCaoDoanhThu"
+                element={<ChartBaoCaoDoanhThu />}
+              ></Route>
+              <Route
+                path="SideBarDefault/LichSuDoiSoatDoanhThu"
+                element={<LichSuDoiSoatDoanhThu />}
+              ></Route>
 
-            <Route
-              path="/SideBarDefault/VaiTroNguoiDungTrenHeThong"
-              element={<VaiTroNguoiDungTrenHeThong />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/PhanQuyenNguoiDung"
-              element={<PhanQuyenNguoiDung />}
-            ></Route>
+              <Route
+                path="SideBarDefault/VaiTroNguoiDungTrenHeThong"
+                element={<VaiTroNguoiDungTrenHeThong />}
+              ></Route>
+              <Route
+                path="SideBarDefault/PhanQuyenNguoiDung"
+                element={<PhanQuyenNguoiDung />}
+              ></Route>
 
-            <Route
-              path="/SideBarDefault/CaiDatCauHinh"
-              element={<CaiDatCauHinh />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/CaiDatCauHinhThongTinTacPham"
-              element={<CaiDatCauHinhThongTinTacPham />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/ChinhSuaThongTinTacPhamP13"
-              element={<ChinhSuaThongTinTacPhamP13 />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/QuanLyLoaiHopDong"
-              element={<QuanLyLoaiHopDong />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/CanhBaoHetHanTacPham"
-              element={<CanhBaoHetHanTacPham />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/LoaiHopDong3"
-              element={<LoaiHopDong3 />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/DoiSoatTheoThang"
-              element={<DoiSoatTheoThang />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/P13ThongTinTacPham"
-              element={<P13ThongTinTacPham />}
-            ></Route>
-            <Route path="/SideBarDefault/TaiApp" element={<TaiApp />}></Route>
-            <Route
-              path="/SideBarDefault/Feedback"
-              element={<Feedback />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/FeedbackAdmin"
-              element={<FeedbackAdmin />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/FeedbackThu"
-              element={<FeedbackThu />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/HuongDanSuDung"
-              element={<HuongDanSuDung />}
-            ></Route>
+              <Route
+                path="SideBarDefault/CaiDatCauHinh"
+                element={<CaiDatCauHinh />}
+              ></Route>
+              <Route
+                path="SideBarDefault/CaiDatCauHinhThongTinTacPham"
+                element={<CaiDatCauHinhThongTinTacPham />}
+              ></Route>
+              <Route
+                path="SideBarDefault/ChinhSuaThongTinTacPhamP13"
+                element={<ChinhSuaThongTinTacPhamP13 />}
+              ></Route>
+              <Route
+                path="SideBarDefault/QuanLyLoaiHopDong"
+                element={<QuanLyLoaiHopDong />}
+              ></Route>
+              <Route
+                path="SideBarDefault/CanhBaoHetHanTacPham"
+                element={<CanhBaoHetHanTacPham />}
+              ></Route>
+              <Route
+                path="SideBarDefault/LoaiHopDong3"
+                element={<LoaiHopDong3 />}
+              ></Route>
+              <Route
+                path="SideBarDefault/DoiSoatTheoThang"
+                element={<DoiSoatTheoThang />}
+              ></Route>
+              <Route
+                path="SideBarDefault/P13ThongTinTacPham"
+                element={<P13ThongTinTacPham />}
+              ></Route>
+              <Route path="SideBarDefault/TaiApp" element={<TaiApp />}></Route>
+              <Route
+                path="SideBarDefault/Feedback"
+                element={<Feedback />}
+              ></Route>
+              <Route
+                path="SideBarDefault/FeedbackAdmin"
+                element={<FeedbackAdmin />}
+              ></Route>
+              <Route
+                path="SideBarDefault/FeedbackThu"
+                element={<FeedbackThu />}
+              ></Route>
+              <Route
+                path="SideBarDefault/HuongDanSuDung"
+                element={<HuongDanSuDung />}
+              ></Route>
 
-            <Route
-              path="/SideBarDefault/KhoBangGhi"
-              element={<KhoBangGhi />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/KhoBangGhi1"
-              element={<KhoBangGhi1 />}
-            ></Route>
+              <Route
+                path="SideBarDefault/KhoBangGhi"
+                element={<KhoBangGhi />}
+              ></Route>
+              <Route
+                path="SideBarDefault/KhoBangGhi1"
+                element={<KhoBangGhi1 />}
+              ></Route>
 
-            <Route
-              path="/SideBarDefault/PheDuyetBG"
-              element={<PheDuyetBG />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/PheDuyetBG1"
-              element={<PheDuyetBG1 />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/DSPlaylist"
-              element={<DSPlayList />}
-            ></Route>
-            <Route
-              path="/SideBarDefault/DSPlaylist1"
-              element={<DSPlayList1 />}
-            ></Route>
+              <Route
+                path="SideBarDefault/PheDuyetBG"
+                element={<PheDuyetBG />}
+              ></Route>
+              <Route
+                path="SideBarDefault/PheDuyetBG1"
+                element={<PheDuyetBG1 />}
+              ></Route>
+              <Route
+                path="SideBarDefault/DSPlaylist"
+                element={<DSPlayList />}
+              ></Route>
+              <Route
+                path="SideBarDefault/DSPlaylist1"
+                element={<DSPlayList1 />}
+              ></Route>
+            </Route>
+            <Route path="*" element={<Navigate to="/Alta_Social_Media" />} />
           </Routes>
 
           {desiredPath === "sidebarhidden" && <SideBar value={2} />}
 
           <Routes>
-            <Route
-              path="/SideBarHidden/ChiTietHopDong"
-              element={<ChiTietHopDong />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/TacPhamUyQuyen"
-              element={<TacPhamUyQuyen />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ChinhSuaTacPham"
-              element={<ChinhSuaTacPham />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ChinhSuaThongTin"
-              element={<ChinhSuaThongTin></ChinhSuaThongTin>}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ChiTietHopDong2"
-              element={<ChiTietHopDong2 />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ThemHopDongUyQuyen"
-              element={<ThemHopDongUyQuyen />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ThemHopDongUyQuyen2"
-              element={<ThemHopDongUyQuyen2 />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ThemBanGhi"
-              element={<ThemBanGhi />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ChiTiepHopDongKhaiThac"
-              element={<ChiTiepHopDongKhaiThac />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/SaoChepHopDong"
-              element={<SaoChepHopDong />}
-            ></Route>
-            <Route
-              path="/sidebarhidden/chinhsuahopdong"
-              element={<ChinhSuaHopDong />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ThemHopDongMoi"
-              element={<ThemHopDongMoi />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ChiTietLichPhat"
-              element={<ChiTietLichPhat />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ChinhSuaLichPhat"
-              element={<ChinhSuaLichPhat />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ApLichChoThietBi"
-              element={<ApLichChoThietBi />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ThemLichPhatMoi"
-              element={<ThemLichPhatMoi />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ChiTietP6"
-              element={<ChiTietP6 />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ThemNguoiDung"
-              element={<ThemNguoiDung />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ThongTinNguoiDung"
-              element={<ThongTinNguoiDung />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ChinhSuaTTNguoiDung"
-              element={<ChinhSuaTTNguoiDung />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/P8ThemThietBiMoi"
-              element={<P8ThemThietBiMoi />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ChiTietThieBiP8"
-              element={<ChiTietThieBiP8 />}
-            ></Route>
+            <Route path="/Alta_Social_Media">
+              <Route
+                path="SideBarHidden/ChiTietHopDong"
+                element={<ChiTietHopDong />}
+              ></Route>
+              <Route
+                path="SideBarHidden/TacPhamUyQuyen"
+                element={<TacPhamUyQuyen />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ChinhSuaTacPham"
+                element={<ChinhSuaTacPham />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ChinhSuaThongTin"
+                element={<ChinhSuaThongTin></ChinhSuaThongTin>}
+              ></Route>
+              <Route
+                path="SideBarHidden/ChiTietHopDong2"
+                element={<ChiTietHopDong2 />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ThemHopDongUyQuyen"
+                element={<ThemHopDongUyQuyen />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ThemHopDongUyQuyen2"
+                element={<ThemHopDongUyQuyen2 />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ThemBanGhi"
+                element={<ThemBanGhi />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ChiTiepHopDongKhaiThac"
+                element={<ChiTiepHopDongKhaiThac />}
+              ></Route>
+              <Route
+                path="SideBarHidden/SaoChepHopDong"
+                element={<SaoChepHopDong />}
+              ></Route>
+              <Route
+                path="SideBarHidden/chinhsuahopdong"
+                element={<ChinhSuaHopDong />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ThemHopDongMoi"
+                element={<ThemHopDongMoi />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ChiTietLichPhat"
+                element={<ChiTietLichPhat />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ChinhSuaLichPhat"
+                element={<ChinhSuaLichPhat />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ApLichChoThietBi"
+                element={<ApLichChoThietBi />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ThemLichPhatMoi"
+                element={<ThemLichPhatMoi />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ChiTietP6"
+                element={<ChiTietP6 />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ThemNguoiDung"
+                element={<ThemNguoiDung />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ThongTinNguoiDung"
+                element={<ThongTinNguoiDung />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ChinhSuaTTNguoiDung"
+                element={<ChinhSuaTTNguoiDung />}
+              ></Route>
+              <Route
+                path="SideBarHidden/P8ThemThietBiMoi"
+                element={<P8ThemThietBiMoi />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ChiTietThieBiP8"
+                element={<ChiTietThieBiP8 />}
+              ></Route>
 
-            <Route
-              path="/SideBarHidden/CapNhatThongTin"
-              element={<CapNhatThongTin />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ChiTietDoanhThu"
-              element={<ChiTietDoanhThu />}
-            ></Route>
+              <Route
+                path="SideBarHidden/CapNhatThongTin"
+                element={<CapNhatThongTin />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ChiTietDoanhThu"
+                element={<ChiTietDoanhThu />}
+              ></Route>
 
-            <Route
-              path="/SideBarHidden/P11ChiTietDoanhThu"
-              element={<P11ChiTietDoanhThu />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/DaChotDoiSoat"
-              element={<DaChotDoiSoat />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/DoanhThuHopDongKhaiThac"
-              element={<DoanhThuHopDongKhaiThac />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/BaoCaoChiTiet"
-              element={<BaoCaoChiTiet />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/Thang3BaoCao"
-              element={<Thang3BaoCao />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/LichSuDongBoThietBi"
-              element={<LichSuDongBoThietBi />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/PhanQuyenCapNhatTTNguoiDung"
-              element={<PhanQuyenCapNhatTTNguoiDung />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/P12ThemNguoiDungMoi"
-              element={<P12ThemNguoiDungMoi />}
-            ></Route>
+              <Route
+                path="SideBarHidden/P11ChiTietDoanhThu"
+                element={<P11ChiTietDoanhThu />}
+              ></Route>
+              <Route
+                path="SideBarHidden/DaChotDoiSoat"
+                element={<DaChotDoiSoat />}
+              ></Route>
+              <Route
+                path="SideBarHidden/DoanhThuHopDongKhaiThac"
+                element={<DoanhThuHopDongKhaiThac />}
+              ></Route>
+              <Route
+                path="SideBarHidden/BaoCaoChiTiet"
+                element={<BaoCaoChiTiet />}
+              ></Route>
+              <Route
+                path="SideBarHidden/Thang3BaoCao"
+                element={<Thang3BaoCao />}
+              ></Route>
+              <Route
+                path="SideBarHidden/LichSuDongBoThietBi"
+                element={<LichSuDongBoThietBi />}
+              ></Route>
+              <Route
+                path="SideBarHidden/PhanQuyenCapNhatTTNguoiDung"
+                element={<PhanQuyenCapNhatTTNguoiDung />}
+              ></Route>
+              <Route
+                path="SideBarHidden/P12ThemNguoiDungMoi"
+                element={<P12ThemNguoiDungMoi />}
+              ></Route>
 
-            <Route
-              path="/SideBarHidden/PhanQuyenNguoiDungCapNhat"
-              element={<PhanQuyenNguoiDungCapNhat />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ThemVaiTroNguoiDung"
-              element={<ThemVaiTroNguoiDung />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ThemBanGhiPlayList"
-              element={<ThemBanGhiPlayList />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/CTBangGhi"
-              element={<CTBangGhi />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/PlaylistTop"
-              element={<PlayListTop />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/SuaPlaylist"
-              element={<SuaPlayList />}
-            ></Route>
-            <Route
-              path="/SideBarHidden/ThemPlaylist"
-              element={<ThemPlayList />}
-            ></Route>
+              <Route
+                path="SideBarHidden/PhanQuyenNguoiDungCapNhat"
+                element={<PhanQuyenNguoiDungCapNhat />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ThemVaiTroNguoiDung"
+                element={<ThemVaiTroNguoiDung />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ThemBanGhiPlayList"
+                element={<ThemBanGhiPlayList />}
+              ></Route>
+              <Route
+                path="SideBarHidden/CTBangGhi"
+                element={<CTBangGhi />}
+              ></Route>
+              <Route
+                path="SideBarHidden/PlaylistTop"
+                element={<PlayListTop />}
+              ></Route>
+              <Route
+                path="SideBarHidden/SuaPlaylist"
+                element={<SuaPlayList />}
+              ></Route>
+              <Route
+                path="SideBarHidden/ThemPlaylist"
+                element={<ThemPlayList />}
+              ></Route>
+            </Route>
+            <Route path="*" element={<Navigate to="/Alta_Social_Media" />} />
           </Routes>
         </div>
       </div>
