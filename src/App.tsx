@@ -106,7 +106,6 @@ function App() {
       >
         <div style={{ width: "100%", display: "flex" }}>
           <Routes>
-	  <Route path="/Alta_Social_Media">
             <Route path="/" element={<Log />}></Route>
             <Route path="/foget" element={<Forget />}></Route>
             <Route path="/KPMK" element={<KhoiPhucMK />}></Route>
@@ -126,13 +125,11 @@ function App() {
               element={<SelectWithHover />}
             ></Route>
             {/* <Route path="/testConfirmMail" element={<Resetpass />}></Route> */}
-	   </Route>
           </Routes>
 
           {desiredPath === "sidebardefault" && <SideBar value={1} />}
 
           <Routes>
-	  <Route path="/Alta_Social_Media">
             <Route path="/SideBarDefault/navbar" element={<Trang1 />}></Route>
             <Route
               path="/SideBarDefault/DShopdong"
@@ -260,13 +257,11 @@ function App() {
               path="/SideBarDefault/DSPlaylist1"
               element={<DSPlayList1 />}
             ></Route>
-	 </Route>
           </Routes>
 
           {desiredPath === "sidebarhidden" && <SideBar value={2} />}
 
           <Routes>
-	  <Route path="/Alta_Social_Media">
             <Route
               path="/SideBarHidden/ChiTietHopDong"
               element={<ChiTietHopDong />}
@@ -426,7 +421,6 @@ function App() {
               path="/SideBarHidden/ThemPlaylist"
               element={<ThemPlayList />}
             ></Route>
-	   </Route>
           </Routes>
         </div>
       </div>
